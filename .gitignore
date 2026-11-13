@@ -1,0 +1,28 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+langgraph_env3/
+aviationstack-mcp/.venv/
+.venv/
+venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+build/
+
+# Coverage and logs
+.coverage
+htmlcov/
+*.log
