@@ -1,0 +1,30 @@
+# Journey Gen AI — backend Python dependencies
+# Starter list based on the documented architecture.
+# Verify against imports in your current backend before treating as exhaustive.
+
+# FastAPI backend
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+python-multipart
+
+# AI orchestration and LLM integration
+langgraph
+langgraph-checkpoint-postgres
+langchain
+langchain-core
+langchain-groq
+langchain-mcp-adapters
+mcp
+
+# PostgreSQL connection and checkpointing
+psycopg[binary,pool]
+
+# HTTP calls / external services
+httpx
+requests
+
+# Authentication (confirm which package backend_api.py actually imports)
+PyJWT
+passlib[bcrypt]
