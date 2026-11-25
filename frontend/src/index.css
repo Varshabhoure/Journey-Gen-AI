@@ -1,0 +1,341 @@
+
+/* ==========================================================
+   JOURNEY GEN AI — GLOBAL STYLES
+   Dark / Light / System Theme
+   ========================================================== */
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --jg-bg: #090e25;
+  --jg-surface: #121a35;
+  --jg-surface-secondary: #192344;
+  --jg-text: #f7f7ff;
+  --jg-text-muted: #aab6d4;
+  --jg-border: rgba(167, 139, 250, 0.16);
+  --jg-accent: #a78bfa;
+  --jg-accent-strong: #8658f5;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --jg-bg: #f5f6fc;
+  --jg-surface: #ffffff;
+  --jg-surface-secondary: #eeebff;
+  --jg-text: #17182f;
+  --jg-text-muted: #626b84;
+  --jg-border: rgba(91, 75, 150, 0.16);
+  --jg-accent: #7256ed;
+  --jg-accent-strong: #6546d9;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--jg-bg);
+  color: var(--jg-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/*
+  NAVBAR
+  Navbar layout is managed in:
+  src/components/Navbar.css
+
+  Avoid duplicate base .jg-navbar rules here.
+*/
+
+/* ==========================================================
+   FOOTER — DARK MODE
+   ========================================================== */
+
+.jg-footer {
+  width: 100%;
+  color: #dce3ff;
+  background: #090e25;
+  border-top: 1px solid rgba(167, 139, 250, 0.16);
+}
+
+.jg-footer-main {
+  width: min(100% - 64px, 1400px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.55fr 1fr 1fr 1.2fr;
+  gap: 45px;
+  padding-top: 65px;
+  padding-bottom: 55px;
+}
+
+.jg-footer-about {
+  max-width: 350px;
+}
+
+.jg-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.jg-footer-logo strong {
+  color: #a78bfa;
+  background: linear-gradient(90deg, #b49aff, #8658f5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.jg-footer-logo-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #c4b5fd;
+  background: #211b4b;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.jg-footer-brand-image {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.jg-footer-about > p {
+  margin: 21px 0;
+  color: #aab6d4;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.jg-footer-plan-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #b49aff;
+  font-size: 13px;
+  font-weight: 750;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.jg-footer-plan-link:hover {
+  color: #ffffff;
+}
+
+.jg-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.jg-footer-column h3 {
+  margin: 5px 0 9px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.jg-footer-column > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #aab6d4;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.jg-footer-column > a:hover {
+  color: #b49aff;
+  transform: translateX(3px);
+}
+
+.jg-footer-column > p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  color: #aab6d4;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.jg-footer-column > p svg {
+  flex: 0 0 16px;
+  margin-top: 2px;
+  color: #b49aff;
+}
+
+.jg-footer-bottom {
+  border-top: 1px solid rgba(167, 139, 250, 0.14);
+}
+
+.jg-footer-bottom-inner {
+  width: min(100% - 64px, 1400px);
+  min-height: 65px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.jg-footer-bottom-inner p {
+  margin: 0;
+  color: #929fbe;
+  font-size: 11px;
+}
+
+.jg-footer-made {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.jg-footer-made svg {
+  color: #c4a2ff;
+}
+
+/* ==========================================================
+   FOOTER — LIGHT MODE
+   ========================================================== */
+
+:root[data-theme="light"] .jg-footer {
+  color: #242640;
+  background: #ffffff;
+  border-top-color: #e7e5f4;
+}
+
+:root[data-theme="light"] .jg-footer-logo,
+:root[data-theme="light"] .jg-footer-column h3 {
+  color: #17182f;
+}
+
+:root[data-theme="light"] .jg-footer-logo strong {
+  background: linear-gradient(90deg, #7256ed, #9452fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme="light"] .jg-footer-about > p,
+:root[data-theme="light"] .jg-footer-column > a,
+:root[data-theme="light"] .jg-footer-column > p {
+  color: #626b84;
+}
+
+:root[data-theme="light"] .jg-footer-plan-link,
+:root[data-theme="light"] .jg-footer-column > p svg {
+  color: #7256ed;
+}
+
+:root[data-theme="light"] .jg-footer-plan-link:hover,
+:root[data-theme="light"] .jg-footer-column > a:hover {
+  color: #5035cb;
+}
+
+:root[data-theme="light"] .jg-footer-bottom {
+  border-top-color: #e7e5f4;
+}
+
+:root[data-theme="light"] .jg-footer-bottom-inner p {
+  color: #737b93;
+}
+
+:root[data-theme="light"] .jg-footer-made svg {
+  color: #7256ed;
+}
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 950px) {
+  .jg-footer-main {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 35px;
+  }
+
+  .jg-footer-contact {
+    grid-column: 2 / 4;
+  }
+}
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .jg-footer-main {
+    width: calc(100% - 32px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 22px;
+    padding-top: 45px;
+    padding-bottom: 38px;
+  }
+
+  .jg-footer-about {
+    grid-column: 1 / -1;
+    max-width: 100%;
+  }
+
+  .jg-footer-contact {
+    grid-column: auto;
+  }
+
+  .jg-footer-bottom-inner {
+    width: calc(100% - 32px);
+    min-height: 80px;
+    padding-block: 16px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 9px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .jg-footer-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .jg-footer-about,
+  .jg-footer-contact {
+    grid-column: auto;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
+}

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#F9FAFF"/><stop offset="1" stop-color="#EEF2FD"/></linearGradient><linearGradient id="accent" x1="0" x2="1"><stop stop-color="#8A51F1"/><stop offset="1" stop-color="#428EF2"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="15" flood-color="#17284F" flood-opacity=".085"/></filter></defs>
+<g font-family="Inter, DejaVu Sans, Arial, sans-serif">
+<rect x="0" y="0" width="1920" height="1080" rx="0" fill="url(#bg)" stroke="none" stroke-width="1"/>
+<rect x="62" y="28" width="238" height="38" rx="19" fill="#EEE8FF" stroke="none" stroke-width="1"/>
+<text x="80" y="54" font-size="16" font-weight="800" fill="#6A42CB" text-anchor="start" letter-spacing="0.8">PROJECT ARCHITECTURE</text>
+<text x="62" y="117" font-size="43" font-weight="850" fill="#152448" text-anchor="start" >Journey Gen AI</text>
+<text x="62" y="151" font-size="20" font-weight="500" fill="#5F6F8D" text-anchor="start" >Multi-agent travel planning system  |  local application  |  conditional research agents</text>
+<rect x="1665" y="58" width="187" height="46" rx="23" fill="url(#accent)" stroke="none" stroke-width="1"/>
+<text x="1759" y="87" font-size="17" font-weight="760" fill="#FFFFFF" text-anchor="middle" >SYSTEM VIEW</text>
+<rect x="62" y="184" width="390" height="660" rx="23" fill="#FFFFFF" stroke="#DFE5F2" stroke-width="1.45"/>
+<rect x="75" y="199" width="364" height="70" rx="15" fill="#F0EAFF" stroke="none" stroke-width="1"/>
+<rect x="92" y="214" width="40" height="40" rx="12" fill="#7953DE" stroke="none" stroke-width="1"/>
+<text x="112" y="241" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle" >1</text>
+<text x="145" y="229" font-size="23" font-weight="800" fill="#15274B" text-anchor="start" >USER INTERFACE</text>
+<text x="145" y="252" font-size="15" font-weight="500" fill="#5C6A86" text-anchor="start" >React + Vite + Axios</text>
+<rect x="484" y="184" width="372" height="660" rx="23" fill="#FFFFFF" stroke="#DFE5F2" stroke-width="1.45"/>
+<rect x="497" y="199" width="346" height="70" rx="15" fill="#E9F4FF" stroke="none" stroke-width="1"/>
+<rect x="514" y="214" width="40" height="40" rx="12" fill="#358BDD" stroke="none" stroke-width="1"/>
+<text x="534" y="241" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle" >2</text>
+<text x="567" y="229" font-size="23" font-weight="800" fill="#15274B" text-anchor="start" >BACKEND API</text>
+<text x="567" y="252" font-size="15" font-weight="500" fill="#5C6A86" text-anchor="start" >FastAPI + Pydantic</text>
+<rect x="888" y="184" width="468" height="660" rx="23" fill="#FFFFFF" stroke="#DFE5F2" stroke-width="1.45"/>
+<rect x="901" y="199" width="442" height="70" rx="15" fill="#F5ECFF" stroke="none" stroke-width="1"/>
+<rect x="918" y="214" width="40" height="40" rx="12" fill="#9259DB" stroke="none" stroke-width="1"/>
+<text x="938" y="241" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle" >3</text>
+<text x="971" y="229" font-size="23" font-weight="800" fill="#15274B" text-anchor="start" >AI ORCHESTRATION</text>
+<text x="971" y="252" font-size="15" font-weight="500" fill="#5C6A86" text-anchor="start" >LangGraph state graph</text>
+<rect x="1388" y="184" width="464" height="660" rx="23" fill="#FFFFFF" stroke="#DFE5F2" stroke-width="1.45"/>
+<rect x="1401" y="199" width="438" height="70" rx="15" fill="#E9F9F3" stroke="none" stroke-width="1"/>
+<rect x="1418" y="214" width="40" height="40" rx="12" fill="#27A085" stroke="none" stroke-width="1"/>
+<text x="1438" y="241" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle" >4</text>
+<text x="1471" y="229" font-size="23" font-weight="800" fill="#15274B" text-anchor="start" >AI &amp; EXTERNAL TOOLS</text>
+<text x="1471" y="252" font-size="15" font-weight="500" fill="#5C6A86" text-anchor="start" >LLM + MCP + maps</text>
+<rect x="80" y="295" width="354" height="102" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="96" y="314" width="6" height="64" rx="3" fill="#7953DE" stroke="none" stroke-width="1"/>
+<text x="114" y="330" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >TRAVELER INPUT</text>
+<text x="114" y="356" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Route, dates, travelers, preferences</text>
+<rect x="80" y="412" width="354" height="112" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="96" y="431" width="6" height="74" rx="3" fill="#7953DE" stroke="none" stroke-width="1"/>
+<text x="114" y="447" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >AI PLANNER</text>
+<text x="114" y="473" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Selected agents + live SSE updates</text>
+<text x="114" y="497" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Day-wise itinerary and research</text>
+<rect x="80" y="540" width="354" height="111" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="96" y="559" width="6" height="73" rx="3" fill="#7953DE" stroke="none" stroke-width="1"/>
+<text x="114" y="575" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >SAVED TRIPS</text>
+<text x="114" y="601" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Dashboard, trip details, PDF export</text>
+<text x="114" y="625" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Single-day regeneration &amp; review</text>
+<rect x="80" y="667" width="354" height="104" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="96" y="686" width="6" height="66" rx="3" fill="#7953DE" stroke="none" stroke-width="1"/>
+<text x="114" y="702" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >PUBLIC SHARING</text>
+<text x="114" y="728" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Read-only shared link and QR code</text>
+<text x="114" y="752" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Revocable by the trip owner</text>
+<text x="82" y="819" font-size="15" font-weight="500" fill="#7D7B98" text-anchor="start" >Pages: Home • Planner • Dashboard • Profile</text>
+<rect x="501" y="295" width="338" height="112" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="517" y="314" width="6" height="74" rx="3" fill="#358BDD" stroke="none" stroke-width="1"/>
+<text x="535" y="330" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >REST + SSE API</text>
+<text x="535" y="356" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Generate itinerary / stream progress</text>
+<text x="535" y="380" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Receive completed trip</text>
+<rect x="501" y="420" width="338" height="107" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="517" y="439" width="6" height="69" rx="3" fill="#358BDD" stroke="none" stroke-width="1"/>
+<text x="535" y="455" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >JWT AUTHENTICATION</text>
+<text x="535" y="481" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Register / login / account</text>
+<text x="535" y="505" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Protect private trip endpoints</text>
+<rect x="501" y="540" width="338" height="110" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="517" y="559" width="6" height="72" rx="3" fill="#358BDD" stroke="none" stroke-width="1"/>
+<text x="535" y="575" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >SAVED-TRIP API</text>
+<text x="535" y="601" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Create / read / update / delete</text>
+<text x="535" y="625" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Sharing and day photos</text>
+<rect x="501" y="663" width="338" height="110" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="517" y="682" width="6" height="72" rx="3" fill="#358BDD" stroke="none" stroke-width="1"/>
+<text x="535" y="698" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >DAY REGENERATION</text>
+<text x="535" y="724" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Generate a one-day alternative</text>
+<text x="535" y="748" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Save only after user accepts</text>
+<text x="503" y="819" font-size="15" font-weight="500" fill="#627C9A" text-anchor="start" >Entry point: backend_api:api</text>
+<rect x="904" y="295" width="436" height="102" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="920" y="314" width="6" height="64" rx="3" fill="#9259DB" stroke="none" stroke-width="1"/>
+<text x="938" y="330" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >SUPERVISOR / ROUTER</text>
+<text x="938" y="356" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Select only requested research agents</text>
+<rect x="904" y="411" width="436" height="161" rx="14" fill="#FFFFFF" stroke="#DFE5F2" stroke-width="1.4"/>
+<rect x="920" y="429" width="6" height="123" rx="3" fill="#9259DB" stroke="none" stroke-width="1"/>
+<text x="939" y="447" font-size="19" font-weight="780" fill="#1C2A50" text-anchor="start" >OPTIONAL RESEARCH AGENTS</text>
+<rect x="941" y="463" width="103" height="37" rx="17" fill="#F1EAFF" stroke="#D7C6F6" stroke-width="1"/>
+<text x="992.5" y="488" font-size="16" font-weight="700" fill="#6442AE" text-anchor="middle" >Flight</text>
+<rect x="1051" y="463" width="103" height="37" rx="17" fill="#F1EAFF" stroke="#D7C6F6" stroke-width="1"/>
+<text x="1102.5" y="488" font-size="16" font-weight="700" fill="#6442AE" text-anchor="middle" >Train</text>
+<rect x="1161" y="463" width="114" height="37" rx="17" fill="#F1EAFF" stroke="#D7C6F6" stroke-width="1"/>
+<text x="1218.0" y="488" font-size="16" font-weight="700" fill="#6442AE" text-anchor="middle" >Hotel</text>
+<rect x="941" y="515" width="149" height="37" rx="17" fill="#F1EAFF" stroke="#D7C6F6" stroke-width="1"/>
+<text x="1015.5" y="540" font-size="16" font-weight="700" fill="#6442AE" text-anchor="middle" >Weather</text>
+<rect x="1097" y="515" width="131" height="37" rx="17" fill="#F1EAFF" stroke="#D7C6F6" stroke-width="1"/>
+<text x="1162.5" y="540" font-size="16" font-weight="700" fill="#6442AE" text-anchor="middle" >Budget</text>
+<rect x="904" y="583" width="436" height="102" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="920" y="602" width="6" height="64" rx="3" fill="#9259DB" stroke="none" stroke-width="1"/>
+<text x="938" y="618" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >ITINERARY AGENT</text>
+<text x="938" y="644" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Always runs • builds scheduled days</text>
+<text x="938" y="668" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Bus / road choices handled here</text>
+<rect x="904" y="699" width="436" height="102" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="920" y="718" width="6" height="64" rx="3" fill="#9259DB" stroke="none" stroke-width="1"/>
+<text x="938" y="734" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >REVIEW / DAY UPDATE</text>
+<text x="938" y="760" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Preview changes • accept or keep original</text>
+<text x="938" y="784" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Other itinerary days remain unchanged</text>
+<text x="908" y="826" font-size="14" font-weight="500" fill="#817397" text-anchor="start" >Graph checkpoints can be persisted to PostgreSQL.</text>
+<rect x="1404" y="295" width="432" height="108" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="1420" y="314" width="6" height="70" rx="3" fill="#27A085" stroke="none" stroke-width="1"/>
+<text x="1438" y="330" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >GROQ LANGUAGE MODEL</text>
+<text x="1438" y="356" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >ChatGroq  •  openai/gpt-oss-120b</text>
+<text x="1438" y="380" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Itinerary drafting and AI reasoning</text>
+<rect x="1404" y="418" width="432" height="111" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="1420" y="437" width="6" height="73" rx="3" fill="#27A085" stroke="none" stroke-width="1"/>
+<text x="1438" y="453" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >MCP RESEARCH TOOLS</text>
+<text x="1438" y="479" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Tavily travel / accommodation search</text>
+<text x="1438" y="503" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Weather conditions and forecast</text>
+<rect x="1404" y="544" width="432" height="110" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="1420" y="563" width="6" height="72" rx="3" fill="#27A085" stroke="none" stroke-width="1"/>
+<text x="1438" y="579" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >OTHER CONFIGURED TOOLS</text>
+<text x="1438" y="605" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Aviationstack or other MCP integrations</text>
+<text x="1438" y="629" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Availability depends on configuration</text>
+<rect x="1404" y="668" width="432" height="112" rx="14" fill="#fff" stroke="#DCE2F0" stroke-width="1.4"/>
+<rect x="1420" y="687" width="6" height="74" rx="3" fill="#27A085" stroke="none" stroke-width="1"/>
+<text x="1438" y="703" font-size="19" font-weight="750" fill="#1C2A50" text-anchor="start" >TRIP PRESENTATION</text>
+<text x="1438" y="729" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Google Maps directions / place search</text>
+<text x="1438" y="753" font-size="17" font-weight="500" fill="#64738F" text-anchor="start" >Landmark photos, when available</text>
+<text x="1408" y="825" font-size="15" font-weight="700" fill="#3B8B79" text-anchor="start" >Search references ≠ confirmed bookings.</text>
+<path d="M449 359 L483 359" stroke="#8C79D6" stroke-width="2.9" fill="none" />
+<path d="M483 359 L472 353 L472 365 Z" fill="#8C79D6"/>
+<path d="M855 359 L887 359" stroke="#8C79D6" stroke-width="2.9" fill="none" />
+<path d="M887 359 L876 353 L876 365 Z" fill="#8C79D6"/>
+<path d="M1359 359 L1387 359" stroke="#8C79D6" stroke-width="2.9" fill="none" />
+<path d="M1387 359 L1376 353 L1376 365 Z" fill="#8C79D6"/>
+<rect x="62" y="882" width="1790" height="119" rx="18" fill="#E7EDF9" stroke="#CED9EC" stroke-width="1.2"/>
+<rect x="78" y="900" width="174" height="77" rx="12" fill="#DFE5F8" stroke="none" stroke-width="1"/>
+<text x="100" y="932" font-size="17" font-weight="800" fill="#48628D" text-anchor="start" >PERSISTENCE</text>
+<text x="100" y="956" font-size="14" font-weight="500" fill="#617698" text-anchor="start" >Separate stores</text>
+<rect x="273" y="899" width="660" height="84" rx="13" fill="#FFFFFF" stroke="#D8DFEF" stroke-width="1.2"/>
+<text x="298" y="929" font-size="19" font-weight="780" fill="#1F3157" text-anchor="start" >SQLITE  |  backend_trips.db</text>
+<text x="298" y="955" font-size="16" font-weight="500" fill="#5C708B" text-anchor="start" >Users, saved itineraries, trip preferences and share tokens</text>
+<rect x="951" y="899" width="875" height="84" rx="13" fill="#FFFFFF" stroke="#D8DFEF" stroke-width="1.2"/>
+<text x="976" y="929" font-size="19" font-weight="780" fill="#1F3157" text-anchor="start" >POSTGRESQL  |  LangGraph checkpointing</text>
+<text x="976" y="955" font-size="16" font-weight="500" fill="#5C708B" text-anchor="start" >Workflow state checkpoints when configured (separate from SQLite)</text>
+<path d="M682 844 L682 882" stroke="#4E91CA" stroke-width="2.4" fill="none" />
+<path d="M682 883 l-6 -11 h12 z" fill="#4E91CA"/>
+<path d="M1140 844 L1140 882" stroke="#976CD3" stroke-width="2.4" fill="none" />
+<path d="M1140 883 l-6 -11 h12 z" fill="#976CD3"/>
+<rect x="62" y="1016" width="1790" height="41" rx="12" fill="#FFF0F2" stroke="#F1D1D9" stroke-width="1"/>
+<text x="84" y="1043" font-size="15" font-weight="850" fill="#A53F5D" text-anchor="start" >NOTE</text>
+<text x="144" y="1043" font-size="17" font-weight="500" fill="#7E4155" text-anchor="start" >Research links, forecast information and budget estimates support planning; verify provider schedules, prices and availability before booking.</text>
+</g></svg>

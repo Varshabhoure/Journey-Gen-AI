@@ -1,0 +1,552 @@
+
+/* ==========================================================
+   JOURNEY GEN AI — NAVBAR
+   Dark / Light / System Theme
+   ========================================================== */
+
+.jg-navbar {
+  --nav-bg: #090e25;
+  --nav-menu-bg: #0c1330;
+  --nav-text: #ffffff;
+  --nav-muted: #bfc9e5;
+  --nav-panel: #151d3c;
+  --nav-panel-hover: #202950;
+  --nav-border: #293255;
+  --nav-accent: #a78bfa;
+  --nav-shadow: rgba(0, 0, 0, 0.12);
+
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  min-height: 84px;
+  padding: 0;
+  display: block;
+  background: var(--nav-bg);
+  border-bottom: 1px solid rgba(168, 151, 255, 0.14);
+  box-shadow: 0 4px 20px var(--nav-shadow);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Light theme variables */
+
+:root[data-theme="light"] .jg-navbar {
+  --nav-bg: #ffffff;
+  --nav-menu-bg: #ffffff;
+  --nav-text: #17182f;
+  --nav-muted: #626b84;
+  --nav-panel: #f4f2ff;
+  --nav-panel-hover: #ece7ff;
+  --nav-border: #e4e0f3;
+  --nav-accent: #7256ed;
+  --nav-shadow: rgba(31, 25, 79, 0.07);
+
+  border-bottom-color: #e9e5f5;
+}
+
+.jg-navbar,
+.jg-navbar *,
+.jg-navbar *::before,
+.jg-navbar *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   NAVBAR LAYOUT
+   ========================================================== */
+
+.jg-navbar-inner {
+  width: min(calc(100% - 64px), 1480px);
+  min-height: 84px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ==========================================================
+   LOGO
+   ========================================================== */
+
+.jg-navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: var(--nav-text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.jg-navbar-brand-image {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.jg-navbar-brand-text {
+  color: var(--nav-text);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.jg-navbar-brand-text strong {
+  color: #a78bfa;
+  background: linear-gradient(90deg, #b49aff, #8658f5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme="light"] .jg-navbar-brand-text strong {
+  background: linear-gradient(90deg, #7256ed, #9452fa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================
+   NAVIGATION LINKS
+   ========================================================== */
+
+.jg-navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2vw, 30px);
+  flex: 1;
+}
+
+.jg-navbar .jg-nav-link {
+  position: relative;
+  color: var(--nav-muted);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.jg-navbar .jg-nav-link:hover,
+.jg-navbar .jg-nav-link.active {
+  color: var(--nav-text);
+}
+
+.jg-navbar .jg-nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  height: 2px;
+  border-radius: 4px;
+  background: #9565fa;
+}
+
+/* ==========================================================
+   DESKTOP ACTIONS
+   ========================================================== */
+
+.jg-navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   THEME SELECTOR
+   ========================================================== */
+
+.jg-theme-selector {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 13px;
+  border: 1px solid var(--nav-border);
+  background: var(--nav-panel);
+  flex-shrink: 0;
+}
+
+.jg-navbar .jg-theme-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--nav-muted);
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.jg-navbar .jg-theme-option:hover {
+  background: var(--nav-panel-hover);
+  color: var(--nav-text);
+}
+
+.jg-navbar .jg-theme-option.is-active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7256ed, #9452fa);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(114, 86, 237, 0.25);
+}
+
+.jg-navbar .jg-theme-option.is-active:hover {
+  color: #ffffff;
+}
+
+.jg-navbar .jg-theme-option:focus-visible {
+  outline: 2px solid var(--nav-accent);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   ACCOUNT
+   ========================================================== */
+
+.jg-navbar-account {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 235px;
+  padding: 11px 14px;
+  color: #e6e9ff;
+  background: #151d3c;
+  border: 1px solid #293255;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.jg-navbar-account > svg:first-child {
+  color: #b59aff;
+  flex-shrink: 0;
+}
+
+.jg-navbar-account > svg:last-child {
+  color: #929bc2;
+  flex-shrink: 0;
+}
+
+.jg-navbar-account-email {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:root[data-theme="light"] .jg-navbar-account {
+  color: #242640;
+  background: #f4f2ff;
+  border-color: #e4e0f3;
+}
+
+:root[data-theme="light"] .jg-navbar-account > svg:first-child {
+  color: #7256ed;
+}
+
+:root[data-theme="light"] .jg-navbar-account > svg:last-child {
+  color: #737b93;
+}
+
+/* ==========================================================
+   LOGIN / SIGNUP / LOGOUT
+   ========================================================== */
+
+.jg-navbar-logout,
+.jg-navbar-signup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 11px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #7256ed, #9452fa);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jg-navbar-logout:hover,
+.jg-navbar-signup:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(133, 87, 245, 0.25);
+}
+
+.jg-navbar-login {
+  color: #dce2fb;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.jg-navbar-login:hover {
+  color: #b99aff;
+}
+
+:root[data-theme="light"] .jg-navbar-login {
+  color: #353553;
+}
+
+:root[data-theme="light"] .jg-navbar-login:hover {
+  color: #7256ed;
+}
+
+/* ==========================================================
+   MOBILE CONTROLS
+   ========================================================== */
+
+.jg-navbar-menu-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--nav-border);
+  border-radius: 10px;
+  color: var(--nav-text);
+  background: var(--nav-panel);
+  cursor: pointer;
+}
+
+.jg-navbar-mobile-actions {
+  display: none;
+}
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1150px) {
+  .jg-navbar-inner {
+    width: min(calc(100% - 40px), 1480px);
+    gap: 16px;
+  }
+
+  .jg-navbar-links {
+    gap: 15px;
+  }
+
+  .jg-navbar-account {
+    max-width: 165px;
+  }
+
+  .jg-navbar-brand-text {
+    font-size: 19px;
+  }
+
+  .jg-navbar-actions {
+    gap: 8px;
+  }
+
+  .jg-navbar-logout,
+  .jg-navbar-signup {
+    padding-inline: 14px;
+  }
+}
+
+/* ==========================================================
+   MOBILE NAVIGATION
+   ========================================================== */
+
+@media (max-width: 960px) {
+  .jg-navbar,
+  .jg-navbar-inner {
+    min-height: 72px;
+  }
+
+  .jg-navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: var(--nav-menu-bg);
+    border-bottom: 1px solid var(--nav-border);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .jg-navbar-links.is-open {
+    display: flex;
+  }
+
+  .jg-navbar .jg-nav-link {
+    display: block;
+    padding: 14px 10px;
+    font-size: 15px;
+  }
+
+  .jg-navbar .jg-nav-link.active::after {
+    display: none;
+  }
+
+  .jg-navbar-actions {
+    display: none;
+  }
+
+  .jg-navbar-menu-button {
+    display: inline-flex;
+  }
+
+  .jg-navbar-mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 16px;
+    margin-top: 12px;
+    border-top: 1px solid var(--nav-border);
+  }
+
+  .jg-navbar-mobile-actions a,
+  .jg-navbar-mobile-actions button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    color: #e6e9ff;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+  }
+
+  .jg-navbar-mobile-actions a:hover,
+  .jg-navbar-mobile-actions button:hover {
+    background: var(--nav-panel-hover);
+  }
+
+  .jg-navbar-mobile-actions .jg-navbar-mobile-signup,
+  .jg-navbar-mobile-actions .jg-navbar-mobile-logout {
+    background: #282052;
+    color: #d9caff;
+  }
+
+  /* Mobile theme selector */
+
+  .jg-navbar-mobile-actions .jg-theme-selector-mobile {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+    padding: 6px;
+    border: 1px solid var(--nav-border);
+    border-radius: 13px;
+    background: var(--nav-panel);
+  }
+
+  .jg-navbar-mobile-actions .jg-theme-selector-mobile .jg-theme-option {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: auto;
+    min-width: 0;
+    min-height: 40px;
+    padding: 9px 6px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    color: var(--nav-muted);
+    background: transparent;
+    font-size: 13px;
+    font-weight: 650;
+    text-align: center;
+  }
+
+  .jg-navbar-mobile-actions .jg-theme-selector-mobile .jg-theme-option:hover {
+    color: var(--nav-text);
+    background: var(--nav-panel-hover);
+  }
+
+  .jg-navbar-mobile-actions .jg-theme-selector-mobile .jg-theme-option.is-active {
+    color: #ffffff;
+    background: linear-gradient(135deg, #7256ed, #9452fa);
+    box-shadow: 0 2px 8px rgba(114, 86, 237, 0.25);
+  }
+
+  :root[data-theme="light"] .jg-navbar-mobile-actions a,
+  :root[data-theme="light"] .jg-navbar-mobile-actions button {
+    color: #242640;
+  }
+
+  :root[data-theme="light"] .jg-navbar-mobile-actions .jg-navbar-mobile-signup,
+  :root[data-theme="light"] .jg-navbar-mobile-actions .jg-navbar-mobile-logout {
+    color: #6546d9;
+    background: #eeebff;
+  }
+
+  :root[data-theme="light"]
+    .jg-navbar-mobile-actions
+    .jg-theme-selector-mobile
+    .jg-theme-option.is-active {
+    color: #ffffff;
+  }
+}
+
+/* ==========================================================
+   SMALL SCREENS
+   ========================================================== */
+
+@media (max-width: 480px) {
+  .jg-navbar-inner {
+    width: calc(100% - 28px);
+  }
+
+  .jg-navbar-brand-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .jg-navbar-brand-text {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================================
+   ACCESSIBILITY
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .jg-navbar,
+  .jg-navbar *,
+  .jg-navbar *::before,
+  .jg-navbar *::after {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,173 @@
+.trip-details-page{--td-bg:#080f27;--td-card:#101b39;--td-card-2:#152246;--td-border:rgba(151,171,235,.16);--td-text:#f6f7ff;--td-muted:#a3b0d1;--td-accent:#a48bff;min-height:80vh;padding:40px 5% 75px;background:radial-gradient(ellipse at 80% 0%,rgba(95,66,205,.19),transparent 40%),linear-gradient(160deg,#080f27,#0b1531 65%,#101338);color:var(--td-text)}
+
+.trip-details-page \*{box-sizing:border-box}.trip-details-container{max-width:1240px;margin:auto}.trip-details-page button{font:inherit;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}.trip-details-page button:disabled{opacity:.55;cursor:not-allowed}.trip-details-page button:focus-visible,.trip-details-page a:focus-visible{outline:2px solid #b8a7ff;outline-offset:3px}.trip-details-back-btn,.trip-details-secondary-btn{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;margin-bottom:28px;background:rgba(255,255,255,.035);border:1px solid var(--td-border);border-radius:12px;color:#cbd6f6}.trip-details-back-btn:hover,.trip-details-secondary-btn:hover{background:#1b2b51}.trip-details-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:27px}.trip-details-heading{min-width:0}.trip-details-label{display:inline-flex;align-items:center;gap:9px;color:#b4a4ff;font-size:12px;font-weight:800;letter-spacing:2px}.trip-details-heading h1{margin:12px 0;font-size:clamp(34px,4.8vw,58px);line-height:1.1;font-weight:800;overflow-wrap:anywhere;background:linear-gradient(100deg,#fff 20%,#b5a1ff 85%);background-clip:text;-webkit-background-clip:text;color:transparent}.trip-details-heading p{margin:0;color:var(--td-muted);line-height:1.6}.trip-details-day-count{display:inline-flex;align-items:center;gap:7px;margin-top:17px;padding:7px 12px;background:#1a2750;border:1px solid var(--td-border);border-radius:999px;color:#cfc7ff;font-size:12px;font-weight:700}.trip-details-header-actions,.trip-details-export-actions{display:flex;gap:10px;flex-wrap:wrap}.trip-details-header-actions{justify-content:flex-end;max-width:610px}.trip-details-header-actions button,.trip-details-export-actions button,.trip-details-qr-download-btn,.trip-details-revoke-btn,.trip-details-bottom-action button,.trip-details-share-link button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 15px;border-radius:11px;border:1px solid var(--td-border);background:#18264b;color:#f1f3ff;font-size:13px;font-weight:700;white-space:nowrap}.trip-details-header-actions button:hover,.trip-details-export-actions button:hover,.trip-details-qr-download-btn:hover,.trip-details-share-link button:hover{background:#243866;border-color:#8d83dc}.trip-details-header-actions .trip-details-edit-btn,.trip-details-bottom-action .trip-details-edit-btn{background:linear-gradient(110deg,#6956e9,#945aff);border-color:transparent;color:white;box-shadow:0 8px 25px rgba(98,79,233,.23)}.trip-details-header-actions .trip-details-edit-btn:hover,.trip-details-bottom-action .trip-details-edit-btn:hover{filter:brightness(1.12)}
+
+.trip-details-info-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-bottom:15px}.trip-details-info-card{min-width:0;display:flex;align-items:center;gap:12px;padding:19px 15px;border:1px solid var(--td-border);border-radius:17px;background:linear-gradient(155deg,#152144,#101a36);box-shadow:0 14px 40px rgba(0,0,0,.09)}.trip-details-info-icon{display:grid;place-items:center;flex-shrink:0;width:42px;height:42px;border-radius:13px;color:#b3a5ff;background:#29265c}.trip-details-info-card span,.trip-details-extra span{display:block;margin-bottom:6px;font-size:12px;color:var(--td-muted)}.trip-details-info-card strong{display:block;color:#fff;font-size:14px;overflow-wrap:anywhere;line-height:1.4}.trip-details-extra{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:28px;padding:18px 22px;border:1px solid var(--td-border);border-radius:15px;background:rgba(20,32,65,.75)}.trip-details-extra>div{display:flex;align-items:center;gap:10px;min-width:0;flex:1 1 260px}.trip-details-extra svg{color:#b7a6ff;flex-shrink:0}.trip-details-extra span{margin:0}.trip-details-extra strong{color:#fff;font-size:13px;overflow-wrap:anywhere}
+
+.trip-details-itinerary{padding:28px;border:1px solid var(--td-border);border-radius:22px;background:rgba(16,27,57,.88);box-shadow:0 22px 55px rgba(0,0,0,.12)}.trip-details-itinerary-heading{display:flex;align-items:center;gap:15px;padding-bottom:23px;margin-bottom:24px;border-bottom:1px solid var(--td-border)}.trip-details-itinerary-icon{display:grid;place-items:center;flex-shrink:0;width:50px;height:50px;border-radius:15px;color:#b5a1ff;background:#2a265c}.trip-details-itinerary-heading h2{margin:0 0 5px;color:#fff;font-size:24px}.trip-details-itinerary-heading p{margin:0;color:var(--td-muted);font-size:13px}.trip-details-itinerary-content{display:grid;gap:19px}.trip-details-itinerary-section{min-width:0;padding:26px;border:1px solid var(--td-border);border-radius:17px;background:linear-gradient(145deg,#142143,#101b38)}.trip-details-day-section{border-left:3px solid #8b70ff}.trip-details-day-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.trip-details-day-actions>span{font-size:11px;letter-spacing:2px;font-weight:800;color:#a998ff}.trip-details-regenerate-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border-radius:10px;border:1px solid #4d458d;background:#262453;color:#d5ccff;font-size:12px;font-weight:700}.trip-details-regenerate-btn:hover{background:#393174}.trip-details-day-message{display:flex;align-items:center;gap:9px;margin-bottom:18px;padding:13px 15px;border:1px solid #4c5597;border-radius:10px;background:#1b2b52;color:#e2e9ff}.trip-details-markdown{min-width:0;color:#d0daf3;font-size:15px;line-height:1.85;overflow-wrap:anywhere}.trip-details-markdown h1,.trip-details-markdown h2,.trip-details-markdown h3,.trip-details-markdown h4{color:#fff;line-height:1.4;overflow-wrap:anywhere}.trip-details-markdown h1{font-size:26px;margin:0 0 18px}.trip-details-markdown h2{font-size:22px;margin:24px 0 14px}.trip-details-markdown h3{font-size:19px;margin:22px 0 12px;color:#c1b4ff}.trip-details-markdown h4{font-size:16px;margin:18px 0 9px;color:#ddd6ff}.trip-details-markdown :is(h1,h2,h3,h4):first-child{margin-top:0}.trip-details-markdown p{margin:9px 0 14px}.trip-details-markdown ul,.trip-details-markdown ol{padding-left:24px;margin:10px 0 18px}.trip-details-markdown li{margin-bottom:8px}.trip-details-markdown li::marker{color:#a895ff}.trip-details-markdown strong{color:#fff;font-weight:750}.trip-details-markdown a{color:#b6a4ff}.trip-details-markdown blockquote{margin:15px 0;padding:12px 18px;border-left:3px solid #9d87ff;background:#1b2a52;border-radius:0 10px 10px 0}.trip-details-markdown hr{border:0;border-top:1px solid var(--td-border);margin:23px 0}.trip-details-markdown .trip-details-table-scroll{width:100%;overflow-x:auto;margin:17px 0;border:1px solid var(--td-border);border-radius:12px}.trip-details-markdown table{width:100%;border-collapse:collapse;min-width:520px;font-size:13px;line-height:1.65}.trip-details-markdown th,.trip-details-markdown td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--td-border);border-right:1px solid var(--td-border);overflow-wrap:break-word}.trip-details-markdown tr:last-child td{border-bottom:0}.trip-details-markdown th{background:#2b2b61;color:#f5f2ff;font-weight:750}.trip-details-markdown tbody tr:nth-child(even){background:rgba(255,255,255,.025)}.trip-details-markdown code{padding:2px 5px;border-radius:5px;background:#2b315c;color:#d5caff}.trip-details-markdown pre{padding:16px;overflow:auto;border-radius:10px;background:#0b142d}.trip-details-markdown pre code{padding:0;background:transparent}
+
+.trip-details-share-panel{padding:23px;margin-bottom:23px;border:1px solid #4b448b;border-radius:17px;background:#171d43}.trip-details-share-panel h2{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:19px;color:white}.trip-details-share-panel label,.trip-details-share-message{display:block;color:#bec8e5;font-size:13px;line-height:1.7}.trip-details-share-link{display:flex;gap:9px;margin:12px 0 16px}.trip-details-share-link input{flex:1;min-width:0;padding:12px 14px;border:1px solid var(--td-border);border-radius:10px;background:#0c1731;color:#e4e8ff}.trip-details-qr-section{display:flex;align-items:center;gap:20px;margin:22px 0;padding-top:19px;border-top:1px solid var(--td-border)}.trip-details-qr-code{flex-shrink:0;padding:8px;border-radius:12px;background:white}.trip-details-qr-section strong{color:white}.trip-details-qr-section p{color:var(--td-muted);line-height:1.6}.trip-details-revoke-btn{border-color:#78425b;color:#ffb2bf;background:#392139}.trip-details-revoke-btn:hover{background:#502a45}.trip-details-bottom-action{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:27px;color:#cbd3ec}.trip-details-bottom-action p{margin:0}.trip-details-message{min-height:55vh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;text-align:center;color:#b9c4e1}.trip-details-message h2{color:white;margin:0}.trip-details-spinner{animation:trip-details-spin 1s linear infinite}@keyframes trip-details-spin{to{transform:rotate(360deg)}}
+
+@media(max-width:1150px){.trip-details-info-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.trip-details-header{flex-direction:column}.trip-details-header-actions{justify-content:flex-start;max-width:none}}@media(max-width:760px){.trip-details-page{padding:28px 4% 55px}.trip-details-info-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.trip-details-itinerary{padding:17px}.trip-details-itinerary-section{padding:18px}.trip-details-heading h1{font-size:36px}.trip-details-markdown{font-size:14px}.trip-details-qr-section{align-items:flex-start;flex-direction:column}}@media(max-width:480px){.trip-details-info-grid{grid-template-columns:1fr}.trip-details-header-actions{width:100%}.trip-details-header-actions button{flex:1 1 auto}.trip-details-share-link{flex-direction:column}.trip-details-day-actions{align-items:flex-start;flex-direction:column}.trip-details-itinerary-heading h2{font-size:20px}.trip-details-itinerary-section{padding:16px 13px}.trip-details-markdown h1{font-size:22px}.trip-details-markdown h2{font-size:19px}.trip-details-markdown h3{font-size:17px}}
+
+@media print{.trip-details-page{background:white!important;color:#111!important;padding:0!important}.trip-details-no-print,.trip-details-back-btn,.trip-details-header-actions,.trip-details-day-actions,.trip-details-bottom-action,.trip-details-share-panel{display:none!important}.trip-details-container{max-width:100%}.trip-details-heading h1{color:#111!important;background:none!important;-webkit-text-fill-color:#111}.trip-details-heading p,.trip-details-info-card span,.trip-details-extra span,.trip-details-markdown,.trip-details-markdown strong,.trip-details-markdown :is(h1,h2,h3,h4),.trip-details-info-card strong,.trip-details-extra strong,.trip-details-itinerary-heading h2{color:#111!important}.trip-details-info-card,.trip-details-extra,.trip-details-itinerary,.trip-details-itinerary-section{background:white!important;box-shadow:none!important;border:1px solid #ddd!important;break-inside:avoid}.trip-details-itinerary-section{break-inside:auto}.trip-details-markdown th{background:#eee!important;color:#111!important}.trip-details-markdown td{color:#111!important}.trip-details-markdown .trip-details-table-scroll{overflow:visible}.trip-details-markdown table{min-width:0;font-size:10px}.trip-details-markdown th,.trip-details-markdown td{padding:7px}.trip-details-itinerary{padding:12px}.trip-details-itinerary-section{padding:14px;margin-bottom:12px}.trip-details-info-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+
+
+/* ==========================================================
+   LIGHT MODE — SAVED TRIP DETAILS
+   The selected theme is controlled globally by App.jsx.
+   Dark mode remains unchanged.
+   ========================================================== */
+:root[data-theme="light"] .trip-details-page {
+  --td-bg: #f7f8fd;
+  --td-card: #ffffff;
+  --td-card-2: #f2f4fc;
+  --td-border: rgba(57, 75, 122, .18);
+  --td-text: #1c2945;
+  --td-muted: #596985;
+  --td-accent: #7052cf;
+  background: radial-gradient(ellipse at 80% 0%, rgba(137, 105, 230, .12), transparent 42%), #f7f8fd;
+  color: var(--td-text);
+  color-scheme: light;
+}
+:root[data-theme="light"] .trip-details-back-btn,
+:root[data-theme="light"] .trip-details-secondary-btn,
+:root[data-theme="light"] .trip-details-header-actions button:not(.trip-details-edit-btn),
+:root[data-theme="light"] .trip-details-export-actions button,
+:root[data-theme="light"] .trip-details-qr-download-btn,
+:root[data-theme="light"] .trip-details-share-link button,
+:root[data-theme="light"] .trip-details-bottom-action button:not(.trip-details-edit-btn) {
+  background: #fff;
+  color: #334363;
+  border-color: var(--td-border);
+}
+:root[data-theme="light"] .trip-details-back-btn:hover,
+:root[data-theme="light"] .trip-details-secondary-btn:hover,
+:root[data-theme="light"] .trip-details-header-actions button:not(.trip-details-edit-btn):hover,
+:root[data-theme="light"] .trip-details-export-actions button:hover,
+:root[data-theme="light"] .trip-details-share-link button:hover {
+  background: #f0edfc;
+  border-color: #ad9be6;
+}
+:root[data-theme="light"] .trip-details-label,
+:root[data-theme="light"] .trip-details-day-actions > span { color: #6545bb; }
+:root[data-theme="light"] .trip-details-heading h1 {
+  background: linear-gradient(100deg, #192947 18%, #7653d4 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+:root[data-theme="light"] .trip-details-day-count {
+  background: #eeeafd;
+  border-color: #dcd2f5;
+  color: #5a439c;
+}
+:root[data-theme="light"] .trip-details-info-card,
+:root[data-theme="light"] .trip-details-itinerary-section {
+  background: linear-gradient(155deg, #fff, #fafbff);
+  border-color: var(--td-border);
+  box-shadow: 0 9px 24px rgba(38, 53, 94, .04);
+}
+:root[data-theme="light"] .trip-details-extra,
+:root[data-theme="light"] .trip-details-itinerary {
+  background: #fff;
+  border-color: var(--td-border);
+  box-shadow: 0 12px 34px rgba(38, 53, 94, .05);
+}
+:root[data-theme="light"] .trip-details-info-icon,
+:root[data-theme="light"] .trip-details-itinerary-icon {
+  background: #eee9ff;
+  color: #7151ce;
+}
+:root[data-theme="light"] .trip-details-info-card strong,
+:root[data-theme="light"] .trip-details-extra strong,
+:root[data-theme="light"] .trip-details-itinerary-heading h2,
+:root[data-theme="light"] .trip-details-markdown :is(h1,h2),
+:root[data-theme="light"] .trip-details-markdown strong,
+:root[data-theme="light"] .trip-details-share-panel h2,
+:root[data-theme="light"] .trip-details-qr-section strong,
+:root[data-theme="light"] .trip-details-message h2 { color: #1d2945; }
+:root[data-theme="light"] .trip-details-markdown { color: #35435e; }
+:root[data-theme="light"] .trip-details-markdown h3 { color: #5c44b1; }
+:root[data-theme="light"] .trip-details-markdown h4 { color: #654d9d; }
+:root[data-theme="light"] .trip-details-markdown a { color: #6145c0; }
+:root[data-theme="light"] .trip-details-markdown li::marker { color: #7356c9; }
+:root[data-theme="light"] .trip-details-regenerate-btn {
+  background: #f0ecff;
+  color: #58409f;
+  border-color: #cfc2f4;
+}
+:root[data-theme="light"] .trip-details-regenerate-btn:hover { background: #e4dcff; }
+:root[data-theme="light"] .trip-details-day-message {
+  background: #eff3ff;
+  color: #344a76;
+  border-color: #cdd8f4;
+}
+:root[data-theme="light"] .trip-details-markdown blockquote {
+  background: #f2f0fd;
+  color: #3a4264;
+}
+:root[data-theme="light"] .trip-details-markdown .trip-details-table-scroll {
+  border-color: var(--td-border);
+}
+:root[data-theme="light"] .trip-details-markdown th {
+  background: #eeeafb;
+  color: #2b2854;
+}
+:root[data-theme="light"] .trip-details-markdown td { color: #34435e; }
+:root[data-theme="light"] .trip-details-markdown tbody tr:nth-child(even) {
+  background: rgba(91, 77, 170, .035);
+}
+:root[data-theme="light"] .trip-details-markdown code {
+  background: #eeeafb;
+  color: #513b9d;
+}
+:root[data-theme="light"] .trip-details-markdown pre {
+  background: #f0f2fa;
+  color: #263552;
+}
+:root[data-theme="light"] .trip-details-share-panel {
+  background: #fff;
+  border-color: #d9d0f4;
+}
+:root[data-theme="light"] .trip-details-share-panel label,
+:root[data-theme="light"] .trip-details-share-message,
+:root[data-theme="light"] .trip-details-bottom-action,
+:root[data-theme="light"] .trip-details-message { color: #5b6882; }
+:root[data-theme="light"] .trip-details-share-link input {
+  background: #f8f9fd;
+  border-color: var(--td-border);
+  color: #263552;
+  color-scheme: light;
+}
+:root[data-theme="light"] .trip-details-revoke-btn {
+  background: #fff0f3;
+  color: #a52c51;
+  border-color: #efc0cc;
+}
+:root[data-theme="light"] .trip-details-revoke-btn:hover { background: #ffe2e9; }
+/* Keep primary edit and export actions readable in light mode. */
+:root[data-theme="light"] .trip-details-header-actions .trip-details-edit-btn,
+:root[data-theme="light"] .trip-details-bottom-action .trip-details-edit-btn {
+  background: linear-gradient(110deg, #6956e9, #945aff);
+  color: #fff;
+  border-color: transparent;
+}
+/* Printed itineraries remain black on white in either theme. */
+@media print {
+  :root[data-theme="light"] .trip-details-page { background: #fff !important; color: #111 !important; }
+  :root[data-theme="light"] .trip-details-heading h1 { background: none !important; color: #111 !important; -webkit-text-fill-color: #111 !important; }
+  :root[data-theme="light"] .trip-details-info-card,
+  :root[data-theme="light"] .trip-details-extra,
+  :root[data-theme="light"] .trip-details-itinerary,
+  :root[data-theme="light"] .trip-details-itinerary-section { background: #fff !important; box-shadow: none !important; }
+  :root[data-theme="light"] .trip-details-markdown,
+  :root[data-theme="light"] .trip-details-markdown :is(h1,h2,h3,h4),
+  :root[data-theme="light"] .trip-details-markdown strong,
+  :root[data-theme="light"] .trip-details-info-card strong,
+  :root[data-theme="light"] .trip-details-extra strong,
+  :root[data-theme="light"] .trip-details-itinerary-heading h2 { color: #111 !important; }
+  :root[data-theme="light"] .trip-details-markdown th { background: #eee !important; color: #111 !important; }
+}

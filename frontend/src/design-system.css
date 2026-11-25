@@ -1,0 +1,597 @@
+
+/* =========================================================
+   JOURNEY GEN AI — SHARED DESIGN SYSTEM
+   Premium Travel SaaS Interface
+   ========================================================= */
+
+/* 1. DESIGN TOKENS */
+
+:root {
+  --jg-navy: #142D46;
+  --jg-navy-light: #203F5D;
+  --jg-teal: #219E9A;
+  --jg-teal-dark: #187F7C;
+  --jg-teal-soft: #E6F5F3;
+  --jg-amber: #E9A86C;
+  --jg-amber-soft: #FFF3E7;
+
+  --jg-page: #F5F7FA;
+  --jg-surface: #FFFFFF;
+  --jg-surface-alt: #F8FAFC;
+
+  --jg-text: #263648;
+  --jg-muted: #718096;
+  --jg-border: #E4EAF0;
+
+  --jg-success: #16845B;
+  --jg-success-soft: #E7F6EF;
+  --jg-warning: #B7791F;
+  --jg-warning-soft: #FFF6E5;
+  --jg-danger: #C24141;
+  --jg-danger-soft: #FDECEC;
+  --jg-info: #3478B9;
+  --jg-info-soft: #EAF3FC;
+
+  --jg-radius-sm: 8px;
+  --jg-radius-md: 14px;
+  --jg-radius-lg: 20px;
+  --jg-radius-xl: 28px;
+
+  --jg-shadow-sm: 0 2px 8px rgba(20, 45, 70, 0.05);
+  --jg-shadow-md: 0 8px 24px rgba(20, 45, 70, 0.08);
+  --jg-shadow-lg: 0 18px 48px rgba(20, 45, 70, 0.12);
+
+  --jg-transition: 0.2s ease;
+  --jg-container: 1200px;
+
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+/* 2. RESET AND GLOBAL STYLES */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--jg-page);
+  color: var(--jg-text);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--jg-navy);
+  line-height: 1.25;
+}
+
+::selection {
+  background: var(--jg-teal);
+  color: white;
+}
+
+/* 3. SHARED CONTAINERS */
+
+.jg-container {
+  width: min(calc(100% - 48px), var(--jg-container));
+  margin-inline: auto;
+}
+
+.jg-section {
+  padding: 76px 0;
+}
+
+.jg-section-heading {
+  max-width: 680px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.jg-section-heading h2 {
+  margin-bottom: 12px;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 750;
+  letter-spacing: -1.2px;
+}
+
+.jg-section-heading p {
+  color: var(--jg-muted);
+  font-size: 16px;
+}
+
+/* 4. TYPOGRAPHY */
+
+.jg-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--jg-teal-dark);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+
+.jg-heading {
+  color: var(--jg-navy);
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.jg-description {
+  color: var(--jg-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* 5. BUTTON SYSTEM */
+
+.jg-btn {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background var(--jg-transition),
+    color var(--jg-transition),
+    border-color var(--jg-transition),
+    transform var(--jg-transition),
+    box-shadow var(--jg-transition);
+}
+
+.jg-btn:hover {
+  transform: translateY(-2px);
+}
+
+.jg-btn-primary {
+  background: var(--jg-teal);
+  color: white;
+  box-shadow: 0 5px 14px rgba(33, 158, 154, 0.18);
+}
+
+.jg-btn-primary:hover {
+  background: var(--jg-teal-dark);
+  box-shadow: 0 8px 18px rgba(33, 158, 154, 0.24);
+}
+
+.jg-btn-dark {
+  background: var(--jg-navy);
+  color: white;
+}
+
+.jg-btn-dark:hover {
+  background: var(--jg-navy-light);
+}
+
+.jg-btn-secondary {
+  border-color: var(--jg-border);
+  background: white;
+  color: var(--jg-navy);
+}
+
+.jg-btn-secondary:hover {
+  border-color: var(--jg-teal);
+  color: var(--jg-teal-dark);
+}
+
+.jg-btn-amber {
+  background: var(--jg-amber);
+  color: var(--jg-navy);
+}
+
+.jg-btn-danger {
+  background: var(--jg-danger-soft);
+  color: var(--jg-danger);
+}
+
+.jg-btn-block {
+  width: 100%;
+}
+
+/* 6. CARD SYSTEM */
+
+.jg-card {
+  border: 1px solid var(--jg-border);
+  border-radius: var(--jg-radius-lg);
+  background: var(--jg-surface);
+  box-shadow: var(--jg-shadow-sm);
+  transition:
+    box-shadow var(--jg-transition),
+    transform var(--jg-transition);
+}
+
+.jg-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--jg-shadow-md);
+}
+
+.jg-card-body {
+  padding: 24px;
+}
+
+.jg-card-title {
+  margin-bottom: 8px;
+  color: var(--jg-navy);
+  font-size: 18px;
+  font-weight: 750;
+}
+
+.jg-card-description {
+  margin-bottom: 0;
+  color: var(--jg-muted);
+  font-size: 14px;
+}
+
+/* 7. FORM ELEMENTS */
+
+.jg-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.jg-label {
+  color: var(--jg-navy);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.jg-input,
+.jg-select,
+.jg-textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 14px;
+  border: 1px solid var(--jg-border);
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  color: var(--jg-text);
+  transition:
+    border-color var(--jg-transition),
+    box-shadow var(--jg-transition);
+}
+
+.jg-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.jg-input:focus,
+.jg-select:focus,
+.jg-textarea:focus {
+  border-color: var(--jg-teal);
+  box-shadow: 0 0 0 3px rgba(33, 158, 154, 0.12);
+}
+
+.jg-input::placeholder,
+.jg-textarea::placeholder {
+  color: #A0AAB6;
+}
+
+/* 8. STATUS BADGES */
+
+.jg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.jg-badge-success {
+  background: var(--jg-success-soft);
+  color: var(--jg-success);
+}
+
+.jg-badge-warning {
+  background: var(--jg-warning-soft);
+  color: var(--jg-warning);
+}
+
+.jg-badge-danger {
+  background: var(--jg-danger-soft);
+  color: var(--jg-danger);
+}
+
+.jg-badge-info {
+  background: var(--jg-info-soft);
+  color: var(--jg-info);
+}
+
+.jg-badge-neutral {
+  background: #EEF1F5;
+  color: #596779;
+}
+
+/* 9. ICON CONTAINERS */
+
+.jg-icon-box {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: var(--jg-teal-soft);
+  color: var(--jg-teal-dark);
+}
+
+.jg-icon-box-amber {
+  background: var(--jg-amber-soft);
+  color: #A86B32;
+}
+
+.jg-icon-box-navy {
+  background: #EAF0F6;
+  color: var(--jg-navy);
+}
+
+/* 10. PAGE LAYOUT */
+
+.jg-page {
+  min-height: 70vh;
+  padding: 40px 0 72px;
+}
+
+.jg-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.jg-page-header h1 {
+  margin-bottom: 8px;
+  font-size: clamp(27px, 4vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.jg-page-header p {
+  margin-bottom: 0;
+  color: var(--jg-muted);
+}
+
+/* 11. GRID UTILITIES */
+
+.jg-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.jg-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.jg-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jg-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* 12. EMPTY AND LOADING STATES */
+
+.jg-empty {
+  padding: 54px 24px;
+  border: 1px dashed #CBD5E1;
+  border-radius: var(--jg-radius-lg);
+  background: white;
+  text-align: center;
+}
+
+.jg-empty-icon {
+  margin: 0 auto 16px;
+  color: var(--jg-teal);
+}
+
+.jg-empty h3 {
+  margin-bottom: 8px;
+}
+
+.jg-empty p {
+  color: var(--jg-muted);
+}
+
+/* 13. DIVIDERS AND SPACING */
+
+.jg-divider {
+  height: 1px;
+  border: 0;
+  background: var(--jg-border);
+}
+
+.jg-muted {
+  color: var(--jg-muted);
+}
+
+.jg-text-teal {
+  color: var(--jg-teal-dark);
+}
+
+.jg-text-navy {
+  color: var(--jg-navy);
+}
+
+.jg-text-danger {
+  color: var(--jg-danger);
+}
+
+.jg-text-success {
+  color: var(--jg-success);
+}
+
+/* 14. ANIMATIONS */
+
+@keyframes jg-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.jg-fade-in {
+  animation: jg-fade-in 0.4s ease both;
+}
+
+@keyframes jg-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.jg-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(33, 158, 154, 0.2);
+  border-top-color: var(--jg-teal);
+  border-radius: 50%;
+  animation: jg-spin 0.7s linear infinite;
+}
+
+/* 15. ACCESSIBILITY */
+
+:focus-visible {
+  outline: 3px solid rgba(33, 158, 154, 0.45);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 16. RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .jg-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .jg-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .jg-section {
+    padding: 58px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .jg-container {
+    width: min(calc(100% - 30px), var(--jg-container));
+  }
+
+  .jg-section {
+    padding: 46px 0;
+  }
+
+  .jg-section-heading {
+    margin-bottom: 28px;
+  }
+
+  .jg-grid-2,
+  .jg-grid-3,
+  .jg-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .jg-page {
+    padding: 28px 0 48px;
+  }
+
+  .jg-page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .jg-card-body {
+    padding: 18px;
+  }
+
+  .jg-btn {
+    min-height: 42px;
+  }
+}
